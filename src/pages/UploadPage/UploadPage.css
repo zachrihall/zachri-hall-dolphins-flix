@@ -1,0 +1,208 @@
+@font-face {
+  font-family: "Avenir-Next";
+  src: url(../../assets/fonts/AvenirNextLTPro-Regular.otf) format("opentype"), url(../../assets/fonts/Alternative_files/AvenirNextLTPro.ttf) format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Avenir-Next";
+  src: url(../../assets/fonts/AvenirNextLTPro-Bold.otf) format("opentype"), url(../../assets/fonts/Alternative_files/AvenirNextLTProBold.ttf) format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+.upload {
+  padding: 0rem 1rem;
+}
+@media (min-width: 1279px) {
+  .upload {
+    padding: 0rem 10rem;
+  }
+}
+.upload__content-upload-title {
+  font-family: "Avenir-Next";
+  font-style: bold;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #323232;
+  font-weight: 400;
+}
+@media (min-width: 1279px) {
+  .upload__content {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+  }
+}
+@media (min-width: 1279px) {
+  .upload__content-upload-image-container {
+    width: 50%;
+  }
+}
+.upload__content-upload-image-container-image {
+  width: 100%;
+  border-radius: 5px;
+}
+@media (min-width: 769px) {
+  .upload__content-upload-image-container-image {
+    width: 33%;
+  }
+}
+@media (min-width: 1279px) {
+  .upload__content-upload-image-container-image {
+    width: 100%;
+  }
+}
+.upload__content-upload-image-container-title {
+  color: silver;
+  font-weight: 400;
+  font-family: "Avenir-Next";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: normal;
+  color: #AFAFAF;
+  padding-bottom: 1rem;
+  margin-left: 4px;
+  padding-bottom: 0rem;
+}
+@media (min-width: 1279px) {
+  .upload__content-upload-input-container {
+    width: 100%;
+  }
+}
+.upload__content-upload-input-container-form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  width: 50%;
+}
+@media (min-width: 1279px) {
+  .upload__content-upload-input-container-form {
+    width: 100%;
+  }
+}
+.upload__content-upload-input-container-form-container {
+  display: flex;
+  flex-direction: column;
+}
+.upload__content-upload-input-container-form-container-title-label {
+  color: silver;
+  font-weight: 400;
+  font-family: "Avenir-Next";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: normal;
+  color: #AFAFAF;
+  padding-bottom: 1rem;
+  margin-left: 4px;
+  padding-bottom: 0rem;
+}
+.upload__content-upload-input-container-form-container-title-title {
+  background-color: #FAFAFA;
+  border: 1px solid #E1E1E1;
+  border-radius: 4px;
+  min-height: 36px;
+  padding: 12px;
+  margin: 4px;
+  outline: none;
+  font-family: "Avenir-Next";
+  font-style: normal;
+  font-weight: 400;
+  color: #323232;
+  font-size: 1rem;
+  line-height: 2rem;
+}
+.upload__content-upload-input-container-form-container-title-title:focus {
+  border: 1px solid #323232;
+}
+.upload__content-upload-input-container-form-container-description-label {
+  color: silver;
+  font-weight: 400;
+  font-family: "Avenir-Next";
+  font-style: normal;
+  font-size: 1rem;
+  font-weight: normal;
+  color: #AFAFAF;
+  padding-bottom: 1rem;
+  margin-left: 4px;
+  padding-bottom: 0rem;
+}
+.upload__content-upload-input-container-form-container-description-text {
+  background-color: #FAFAFA;
+  border: 1px solid #E1E1E1;
+  border-radius: 4px;
+  min-height: 36px;
+  padding: 12px;
+  margin: 4px;
+  outline: none;
+  font-family: "Avenir-Next";
+  font-style: normal;
+  font-weight: 400;
+  color: #323232;
+  font-size: 1rem;
+  line-height: 2rem;
+  font-family: "Avenir-Next";
+  font-style: normal;
+  font-weight: 400;
+  color: #323232;
+  font-size: 1rem;
+  line-height: 2rem;
+  width: 100%;
+  height: 7rem;
+}
+.upload__content-upload-input-container-form-container-description-text:focus {
+  border: 1px solid #323232;
+}
+@media (min-width: 769px) {
+  .upload__content-upload-input-container-form-container-description-text {
+    height: 4rem;
+    width: 100%;
+  }
+}
+.upload__content-upload-input-container-form-container-description-text--error {
+  border: 1px solid red;
+}
+@media (min-width: 769px) {
+  .upload__content-upload-input-container-form-buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    justify-content: end;
+  }
+}
+.upload__content-upload-input-container-form-buttons-upload {
+  background-image: url("../../assets/icons/publish.svg");
+  display: flex;
+  justify-content: center;
+  background-color: #0095FF;
+  background-repeat: no-repeat;
+  background-position: 2% 50%;
+  border: none;
+  width: 100%;
+  padding: 1rem;
+  border-radius: 3px;
+  color: white;
+  font-size: 1.25rem;
+}
+@media (min-width: 769px) {
+  .upload__content-upload-input-container-form-buttons-upload {
+    width: 30%;
+    order: 2;
+  }
+}
+.upload__content-upload-input-container-form-buttons-upload-icon {
+  width: 50%;
+}
+.upload__content-upload-input-container-form-buttons-cancel {
+  margin: 1rem 0rem;
+  text-align: center;
+  color: #0095FF;
+  font-weight: 400;
+}
+@media (min-width: 769px) {
+  .upload__content-upload-input-container-form-buttons-cancel {
+    text-align: start;
+    order: 1;
+  }
+}/*# sourceMappingURL=UploadPage.css.map */

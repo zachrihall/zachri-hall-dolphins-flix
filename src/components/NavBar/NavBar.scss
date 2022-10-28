@@ -1,0 +1,137 @@
+@use '../../styles/partials/_mixins.scss' as *;
+
+.navbar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.75rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    @include tablet{
+        display: flex;
+        flex-direction: row;
+    }
+
+    &__link{
+        text-decoration: none;
+    }
+
+    &__logo {
+        width: 8rem;
+
+        @include tablet{
+            margin-right: 6rem;
+        }
+    }
+
+    &__search-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        gap: 1rem;
+
+        @include tablet{
+            width: 50%;
+        }
+
+        &-form {
+            color: #555;
+            display: flex;
+            padding: 2px;
+            border: 1px solid currentColor;
+            border-radius: 5px;
+            width: 100%;
+            border-color: #e1e1e1;
+
+            
+
+            &-input {
+                border: none;
+                background: transparent;
+                margin: 0;
+                padding: 0.5rem 0rem;
+                color: inherit;
+                border: 1px solid transparent;
+                border-radius: inherit;
+                width: 100%;
+
+                &:focus {
+                    outline: none;
+                }
+            }
+
+            &-submit {
+                text-indent: -999px;
+                overflow: hidden;
+                width: 40px;
+                padding: 0;
+                margin: 0;
+                border: 1px solid transparent;
+                border-radius: inherit;
+                background: transparent url("../../assets/icons/search.svg");
+                background-repeat: no-repeat;
+                background-position: 50%;
+                cursor: pointer;
+                opacity: 0.7;
+
+                &:focus {
+                    outline: none;
+                }
+
+            }
+        }
+
+        &-profile-picture {
+            width: 3rem;
+            height: 3rem;
+            border-radius: 50%;
+            object-fit:cover;
+
+            @include tablet{
+                display: none ;
+            }
+
+            &--tablet{
+                @include mobile{
+                    display: none;
+                }
+
+                @include tablet{
+                    display: flex;
+                }
+            }
+        }
+    }
+
+    &__upload {
+        background-image: url("../../assets/icons/upload.svg");
+        display: flex;
+        justify-content: center;
+        background-color: #0095FF;
+        background-repeat: no-repeat;
+        background-position: 2% 50%;
+        border: none;
+        width: 100%;
+        padding: 0.75rem;
+        border-radius: 3px;
+        color: white;
+
+        &-wrapper{
+            width: 100%;
+            text-decoration: none;
+            @include tablet{
+                width: 30%;
+            }
+        }
+
+        
+
+        &-icon{
+            width: 50%;
+            
+        }
+    }
+
+}

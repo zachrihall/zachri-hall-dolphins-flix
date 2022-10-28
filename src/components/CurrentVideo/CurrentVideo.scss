@@ -1,0 +1,147 @@
+@use '../../styles/partials/_mixins.scss' as *;
+@use '../../styles/partials/_variables.scss' as *;
+
+.current-video {
+
+    &__title-container {
+        &-title {
+            @include mobile-page-header;
+            font-weight: 400;
+        }
+    }
+
+    &__video-info {
+        display: flex;
+        justify-content: space-between;
+
+
+        &-channel-date-container {
+            display: flex;
+            flex-direction: column;
+
+
+
+            width: 50%;
+
+            @include tablet {
+                flex-direction: row;
+                width: fit-content;
+                gap: 1rem;
+            }
+
+            &--channel {
+                @include mobile-sub-header;
+                font-weight: bold;
+                color: $black;
+
+                @include tablet {
+                    margin: 0rem
+                }
+
+            }
+
+            &--date {
+                @include mobile-sub-header;
+
+                @include tablet {
+                    margin: 0rem
+                }
+            }
+
+        }
+
+        &-views-likes-container {
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+
+            @include tablet {
+                flex-direction: row;
+                width: fit-content;
+                gap: 1rem;
+            }
+
+            &-views-container {
+                display: flex;
+                width: 100%;
+
+                &-views {
+                    @include mobile-sub-header;
+                    padding-bottom: 0rem;
+                    margin-left: 1rem;
+
+
+                    @include tablet {
+                        margin: 0rem
+                    }
+                }
+
+                &-icon {
+                    width: 1.5rem;
+                    @include tablet {
+                        margin-bottom: 1rem;
+                        margin-right: 1rem;
+
+                    }
+                }
+            }
+
+            &-likes-container {
+                display: flex;
+                width: 50%;
+
+                &-likes {
+                    @include mobile-sub-header;
+                    padding-bottom: 0rem;
+                    margin-left: 1rem;
+
+
+                    @include tablet {
+                        margin: 0rem
+                    }
+                }
+
+                &-icon {
+                    width: 1.5rem;
+
+                    @include tablet {
+                        margin-bottom: 1rem;
+                        margin-right: 1rem;
+                    }
+
+
+
+                }
+
+            }
+
+            // &--likes {
+            //     @include mobile-sub-header;
+
+            //     @include tablet {
+            //         margin: 0rem
+            //     }
+
+            // }
+
+        }
+
+
+    }
+
+    &__description {
+        @include mobile-body-copy;
+    }
+
+    &__hr {
+        &--below-title {
+            @include tablet {
+                display: none;
+            }
+        }
+
+        // &--below-info {}
+
+    }
+
+}
