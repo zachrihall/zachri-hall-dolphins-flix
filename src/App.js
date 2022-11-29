@@ -12,7 +12,7 @@ class App extends React.Component {
 
   render() {
     //ONLY RENDERS WHEN THE DATA FROM API HAS COME IN
-    if (this.state.didLoad) {
+    if (this.state.didLoad === true) {
       return (
         <>
           <Router>
@@ -27,7 +27,7 @@ class App extends React.Component {
         </>
       );
     } else {
-      return (<></>)
+      return (<>loading animation...</>)
     }
   }
 }

@@ -14,11 +14,14 @@ class CommentsSection extends React.Component {
   onSubmitHandler = (event) => {
     event.preventDefault();
 
+    console.log(Math.floor(Date.now() / 1000))
+
 
     let newComment = {
-      name: "userNamePlaceHolder",
+      name: "Guest User",
       comment: event.target.textarea.value,
-      timestamp: 12345678890
+      timestamp: ":/",
+      new: "new"
     };
 
     this.setState(
@@ -84,6 +87,7 @@ class CommentsSection extends React.Component {
                   name={comment.name}
                   comment={comment.comment}
                   timestamp={comment.timestamp}
+                  
                 />
               ))}
             </div>

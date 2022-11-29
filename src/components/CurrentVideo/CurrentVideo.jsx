@@ -2,15 +2,29 @@ import React from "react";
 import './CurrentVideo.scss';
 import eye from '../../assets/icons/views.svg';
 import likes from '../../assets/icons/likes.svg';
+import axios from "axios";
 
 
 
 
 class CurrentVideo extends React.Component {
 
+  state = {
+    videoUrl: ''
+  }
+
+  async componentDidMount() {
+    const videoUrlRes = await axios.get(this.props.currentVideo.video, { params: { 'api_key': '2cb13bc9-a4d8-4499-95c4-fee987dd0974' } });
+    console.log(videoUrlRes);
+    this.setState({
+      videoUrl: videoUrlRes
+    });
+
+  }
+
+
   render() {
     let newDate = new Date(parseInt(this.props.currentVideo.timestamp)).toLocaleString();
-
 
     return (
       <section className="current-video">
@@ -18,6 +32,16 @@ class CurrentVideo extends React.Component {
           controls>
           <source src=""></source>
         </video>
+
+        {/* <iframe width="420" height="315" frameBorder="0" 
+          src="www.youtube.com/embed/watch?v=2szVzrfmjyA"> </iframe> */}
+
+        {/* <iframe className="current-video__video" src="https://www.youtube.com/embed/R7Q9qAfOFk4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> */}
+
+        {/* <iframe className="current-video__video" src={this.props.url} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> */}
+
+
+
 
         <div className="current-video__title-container">
           <h1 className="current-video__title-container-title">{this.props.currentVideo.title}</h1>

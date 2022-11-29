@@ -10,6 +10,11 @@
         }
     }
 
+    &__video{
+        width: 88vw;
+        height: 30rem;
+    }
+
     &__video-info {
         display: flex;
         justify-content: space-between;
