@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom';
 function NavBar() {
     return (
         <section className="navbar">
-            <Link to={"/home"}><img className="navbar__logo" src={logo} alt="BrainFlix Logo" /></Link>
+            <Link to={"/home"}><img className="navbar__logo" src={logo} alt="DolphinFlix Logo" /></Link>
             <div className='navbar__search-container'>
                 <form className='navbar__search-container-form'>
                     <button className='navbar__search-container-form-submit' type='submit'>Search</button>

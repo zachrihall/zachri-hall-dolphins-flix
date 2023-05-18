@@ -16,31 +16,31 @@ class HomePage extends React.Component {
   };
 
   async componentDidMount() {
-    const dataShort = await axios.get("https://project-2-api.herokuapp.com/videos?api_key=2cb13bc9-a4d8-4499-95c4-fee987dd0974");
+    const dataShort = await axios.get("http://127.0.0.1:8080/videos");
     let currentVideoId;
     currentVideoId = dataShort.data[0].id;
 
 
-    const currentVideoInfo = await axios.get(`https://project-2-api.herokuapp.com/videos/${currentVideoId}/?api_key=2cb13bc9-a4d8-4499-95c4-fee987dd0974`);
+    const currentVideoInfo = await axios.get(`http://127.0.0.1:8080/videos/${currentVideoId}`);
     this.setState({ videoListShort: dataShort.data, currentVideoId: currentVideoId, currentVideoInfo: currentVideoInfo.data, didLoad: true });
   }
 
   componentDidUpdate = () => {
     if (this.props.pathId) {
       if (this.state.currentVideoId !== this.props.pathId.match.params.id) {
-        axios.get(`https://project-2-api.herokuapp.com/videos/${this.props.pathId.match.params.id}/?api_key=2cb13bc9-a4d8-4499-95c4-fee987dd0974`).then((respInfo) => { this.setState({ currentVideoId: this.props.pathId.match.params.id, currentVideoInfo: respInfo.data, atHome: false }) })
+        axios.get(`http://127.0.0.1:8080/videos/${this.props.pathId.match.params.id}/?api_key=2cb13bc9-a4d8-4499-95c4-fee987dd0974`).then((respInfo) => { this.setState({ currentVideoId: this.props.pathId.match.params.id, currentVideoInfo: respInfo.data, atHome: false }) })
       }
     }
     else  {
       if(this.state.atHome === false){
-      axios.get("https://project-2-api.herokuapp.com/videos/84e96018-4022-434e-80bf-000ce4cd12b8/?api_key=2cb13bc9-a4d8-4499-95c4-fee987dd0974").then((respData) => {this.setState({currentVideoId: respData.data.id, currentVideoInfo: respData.data, atHome: true});
+      axios.get("http://127.0.0.1:8080/videos/84e96018-4022-434e-80bf-000ce4cd12b8/?api_key=2cb13bc9-a4d8-4499-95c4-fee987dd0974").then((respData) => {this.setState({currentVideoId: respData.data.id, currentVideoInfo: respData.data, atHome: true});
     })}
 
     }
   }
 
   async getVideoLong(videoId) {
-    const getVideoLong = await axios.get(`https://project-2-api.herokuapp.com/videos/${videoId}/?api_key=2cb13bc9-a4d8-4499-95c4-fee987dd0974`);
+    const getVideoLong = await axios.get(`http://127.0.0.1:8080/videos/${videoId}/?api_key=2cb13bc9-a4d8-4499-95c4-fee987dd0974`);
     return getVideoLong;
   }
 
